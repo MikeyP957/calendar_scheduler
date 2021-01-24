@@ -21,7 +21,13 @@ Whichever library you choose, be sure to read the documentation carefully!
 
 ```
 AS AN employee with a busy schedule
+
 I WANT to add important events to a daily planner
+    get elements, 
+    use a form,   
+    check to make sure they are available (no other even scheduled for same day/time, give alert otherwise),
+    make sure the user puts in valid information (give alert otherwise),
+    and append (alert that it was successful)
 SO THAT I can manage my time effectively
 ```
 
@@ -30,25 +36,44 @@ SO THAT I can manage my time effectively
 
 ```
 GIVEN I am using a daily planner to create a schedule
+-try using an array of booleans (busy/available) for each day. each index will account for one hour for each hour in the buisness day. (possible modification for half, and quarter hours by nesting an array in an element of the hourlyDaySchedule array.)
 
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
-
+    when clicked display: "block"
+        current day (top of screen)
+        calander displayed
 
 WHEN I scroll down
 THEN I am presented with time blocks for standard business hours
 
+    form with time blocks
+
 WHEN I view the time blocks for that day
 THEN each time block is color-coded to indicate whether it is in the past, present, or future
+
+    conditional that compares if event is less than equal or more than the date
+    change color accordingly
+        maybe use ternary operator.....(I think thats what its called LOL)
 
 WHEN I click into a time block
 THEN I can enter an event
 
+    get the buttons by class, onclick get the id or data or value... 
+    that will open a form asking for input, style and durration
+    submit button that 
+
 WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage
 
+    store these as divs?
+    append the container with a delete button
+
+
 WHEN I refresh the page
 THEN the saved events persist
+
+    call the local storage when the page is loaded
 ```
 
 
