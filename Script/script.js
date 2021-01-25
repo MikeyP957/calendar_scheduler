@@ -22,9 +22,13 @@ $(document).ready(function() {
 
           $(".confirm").append(confirmButton);
       }
+
+
+
         
   //Call funtions
     confirmButton();
+    
   //Event Handlers
 
 
