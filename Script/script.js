@@ -11,11 +11,9 @@ $(document).ready(function() {
 
     //Functions
       for (i = 0; i < 9; i++){
-        var hourlySchedule = ("<div>")
-          
-          hourlySchedule.html(dailyEvents.workingHours[i]);
-          timeBlocksContainer.append(hourlySchedule)
-      }
+         var hourlySchedule = ("<div>" + dailyEvents.workingHours[i] +"<div>");
+            timeBlocksContainer.append(hourlySchedule);
+        }
 
     //Call funtions
 
