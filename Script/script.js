@@ -23,7 +23,7 @@ $(document).ready(function() {
           $(".confirm").append(confirmButton);
       }
 
-
+      //function that takes in user input and 
 
         
   //Call funtions
