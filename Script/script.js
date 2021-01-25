@@ -10,7 +10,8 @@ $(document).ready(function() {
       var timeBlocksContainer = $("#timeBlocksContainer");
 
     //Functions
-      for (i = 0; i < 9; i++){
+      
+        for (i = 0; i < 9; i++){ //creates elements for each hour
          var hourlySchedule = ("<div>" + dailyEvents.workingHours[i] +"<div>");
             timeBlocksContainer.append(hourlySchedule);
         }
