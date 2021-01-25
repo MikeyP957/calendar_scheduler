@@ -8,7 +8,10 @@ $(document).ready(function() {
 
      //Get html
       var timeBlocksContainer = $("#timeBlocksContainer");
-
+      var workingHours = $(".workingHour");
+      var confirmUpdate = $(".confirm");
+      var appointments = $(".appointments");
+      
     //Functions
       
         for (i = 0; i < 9; i++){ //creates elements for each hour
