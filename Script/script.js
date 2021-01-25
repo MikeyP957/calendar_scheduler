@@ -1,27 +1,31 @@
 $(document).ready(function() {
-    //Global Variables
+  //Global Variables
     
       var dailyEvents = { //an object to store daily events
         workingHours:["9 AM", "10 AM", "11 AM","Noon", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"],
       
       }; 
 
-     //Get html
+    //Get html
       var timeBlocksContainer = $("#timeBlocksContainer");
       var workingHours = $(".workingHour");
       var confirmUpdate = $(".confirm");
       var appointments = $(".appointments");
-      
-    //Functions
-      
-        for (i = 0; i < 9; i++){ //creates elements for each hour
-         var hourlySchedule = ("<div>" + dailyEvents.workingHours[i] +"<div>");
-            timeBlocksContainer.append(hourlySchedule);
-        }
 
-    //Call funtions
+  //Functions
+      
+      function confirmButton(){
+          //make a button
+          var confirmButton = $("<button>");
+          confirmButton.addClass("saveBtn");
+          confirmButton.text("Confirm Appointment")
 
-    //Event Handlers
+          $(".confirm").append(confirmButton);
+      }
+        
+  //Call funtions
+    confirmButton();
+  //Event Handlers
 
 
   });
