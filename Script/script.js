@@ -9,30 +9,29 @@ $(document).ready(function() {
     //Get html
       var timeBlocksContainer = $("#timeBlocksContainer");
       var workingHours = $(".workingHour");
-      var confirmUpdate = $(".confirm");
-      var appointments = $(".appointments");
+      var confirmByValue = $(".confirm")
+      var apptByValue = $(".appointments")
 
+    //tester variables
+    var valueOf9 = "9";
+    var valueOf10 = "10";  
   //Functions
       
-      function confirmButton(){
-          //make a button
-          var confirmButton = $("<button>");
-          confirmButton.addClass("saveBtn");
-          confirmButton.text("Confirm Appointment")
-
-          $(".confirm").append(confirmButton);
-      }
-      //When a .saveBtn is clicked...
-      $(".saveBtn").on("click", function(){
-        //if the text exists then append to this div as a list
-        if( $()){
-
+ 
+    
+       // When a .saveBtn is clicked...
+       $(".saveBtn").on("click", function(){
+        // if the text exists then append to this div as a list
+        if($(".text").val().length != 0 ){
+          var thisValue = $(this.saveBtn.val());
+          var corrspondingText = "candy"
+          $(".appointments").val(thisValue).append(corrspondingText)
         }
         else return;
+      });
 
-      })
 
-      //function that takes in user input and 
+      // function that takes in user input and 
 
         
   //Call funtions
@@ -41,4 +40,4 @@ $(document).ready(function() {
   //Event Handlers
 
 
-  });
+  })
