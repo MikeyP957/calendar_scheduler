@@ -22,6 +22,15 @@ $(document).ready(function() {
 
           $(".confirm").append(confirmButton);
       }
+      //When a .saveBtn is clicked...
+      $(".saveBtn").on("click", function(){
+        //if the text exists then append to this div as a list
+        if( $()){
+
+        }
+        else return;
+
+      })
 
       //function that takes in user input and 
 
