@@ -1,17 +1,7 @@
 $(document).ready(function() {
   //Global Variables
-    
-      var dailyEvents = { //an object to store daily events
-        workingHours:["9 AM", "10 AM", "11 AM","Noon", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"],
-      
-      }; 
-
-    //Get html
-      var timeBlocksContainer = $("#timeBlocksContainer");
-      var workingHours = $(".workingHour");
-      var confirm = $(".confirm")
-      var apptByValue = $(".appointments")
-
+    //array to store local storage
+   appointmentsLS = [],
   
   //Functions
       
@@ -35,10 +25,22 @@ $(document).ready(function() {
         //append
         console.log("button click")
         console.log(correspondingForm, "-text from form")
-      
+        //add the text from the form to appointmentsLS array
+        appointmentsLS.push(correspondingForm)
       });
 
+      // function storeAppointments() {
+      //   localStorage.setItem("appointments" JSON.stringify(appointmentsLS))
+      // };
 
+      // function init() {
+      //   var storedAppts = JSON.parse(localStorage.getItem("appointments"))
+
+      //   if (storedAppts !== null) {
+      //     appointmentsLS = storedAppts;
+      //   }
+
+      // }
     
   //Call funtions
  
