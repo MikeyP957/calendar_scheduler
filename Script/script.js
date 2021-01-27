@@ -9,7 +9,7 @@ $(document).ready(function() {
     //Get html
       var timeBlocksContainer = $("#timeBlocksContainer");
       var workingHours = $(".workingHour");
-      var confirmByValue = $(".confirm")
+      var confirm = $(".confirm")
       var apptByValue = $(".appointments")
 
     //tester variables
@@ -19,23 +19,31 @@ $(document).ready(function() {
       
  
     
-       // When a .saveBtn is clicked...
-       $(".saveBtn").on("click", function(){
-        // if the text exists then append to this div as a list
-        if($(".text").val().length != 0 ){
-          var thisValue = $(this.saveBtn.val());
-          var corrspondingText = "candy"
-          $(".appointments").val(thisValue).append(corrspondingText)
-        }
-        else return;
+       // When a .btn is clicked...
+       $(".btn").on("click", function(){
+        var appendAppt = $("<div>");
+        var correspondingElm = ;
+        var correspondingForm = $("text");
+        //add class
+        
+        //add content(user input from form)
+        appendAppt.text(correspondingForm)
+        //choose location w/ variable (it changes by button)
+
+        //append
+      
       });
 
 
       // function that takes in user input and 
+      function appointmentRender(){
+        
 
+
+      }
         
   //Call funtions
-    confirmButton();
+ 
     
   //Event Handlers
 
