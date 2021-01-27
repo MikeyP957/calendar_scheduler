@@ -29,7 +29,7 @@ $(document).ready(function() {
         //add content(user input from form)
         appendAppt.text(correspondingForm)
         //choose location w/ variable (it changes by button)
-        $("#9AM").append(appendAppt)
+        $(".9AM-appointments").append(appendAppt)
         //append
         console.log("button click")
       
