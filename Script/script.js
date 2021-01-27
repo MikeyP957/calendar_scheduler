@@ -24,7 +24,7 @@ $(document).ready(function() {
         console.log(this.id, "this id")
         var appendAppt = $("<div>");
         var correspondingElm = this.id;
-        var correspondingForm = $("#write").val().trim();
+        var correspondingForm = $("#write-" + correspondingElm).val().trim();
                 
         //add content(user input from form)
         appendAppt.text(correspondingForm)
