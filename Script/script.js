@@ -12,37 +12,32 @@ $(document).ready(function() {
       var confirm = $(".confirm")
       var apptByValue = $(".appointments")
 
-    //tester variables
-    var valueOf9 = "9";
-    var valueOf10 = "10";  
+  
   //Functions
       
- 
+ //give my button an ID
+ //I retrieve that ID and it matches a class in my form and my div
+ //when I run function the ID is pasted to this function so everything matches
     
        // When a .btn is clicked...
        $(".btn").on("click", function(){
+        console.log(this.id, "this id")
         var appendAppt = $("<div>");
-        var correspondingElm = "9AM";
-        var correspondingForm = "Testing Lol";
-        //add class
-        
+        var correspondingElm = this.id;
+        var correspondingForm = $("#write").val().trim();
+                
         //add content(user input from form)
         appendAppt.text(correspondingForm)
         //choose location w/ variable (it changes by button)
-        $(".9AM-appointments").append(appendAppt)
+        $("." + correspondingElm).append(appendAppt)
         //append
         console.log("button click")
+        
       
       });
 
 
-      // function that takes in user input and 
-      function appointmentRender(){
-        
-
-
-      }
-        
+    
   //Call funtions
  
     

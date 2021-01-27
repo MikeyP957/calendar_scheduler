@@ -30,30 +30,37 @@
     </header>
     <div id="timeBlocksContainer" class="container">
       <!-- Timeblocks go here -->
+
   <!--Hour 9 Row-->
       <div class= "container row" >
         <!--To label the hour-->
         <div class= "col-3 workingHour" >workingHour</div>
         <!--Form for making appointments-->
         <div class= "col-6 appointments">
+          <!--where 9AM appts go-->
           <div class= 9AM-appointments></div>
           <div class="input-group mb-3">      
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">New Appointment:</span>
             </div>
-            <input type="text" class="form-control hour9" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input id="write" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
           </div>
         </div>
         <!--Where the submit button lives-->
         <div class ="col-3 confirm">
-          <button class="btn" >Confirm Appointment</button>
+          <button id="9AM-appointments" class="btn" >Confirm Appointment</button>
         </div>
       </div>
+
+
+
   <!--Hour 10 Row-->
       <div class= "container row" >
         <div class= "col-3 workingHour" >workingHour</div>
         <!--Form for making appointments-->
         <div class= "col-6 appointments" >
+          <!--where 10AM appts go-->
+          <div class= 10AM-appointments></div>
           <div class="input-group mb-3">      
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">New Appointment:</span>
@@ -63,7 +70,7 @@
         </div>
         <!--Where the submit button lives-->
         <div class ="col-3 confirm">
-          <button class= "btn" >Confirm Appointment</button>
+          <button id="10AM-appointments" class= "btn" >Confirm Appointment</button>
         </div>
       </div>
     </div>
