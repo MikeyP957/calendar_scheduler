@@ -22,15 +22,16 @@ $(document).ready(function() {
        // When a .btn is clicked...
        $(".btn").on("click", function(){
         var appendAppt = $("<div>");
-        var correspondingElm = ;
-        var correspondingForm = $("text");
+        var correspondingElm = "9AM";
+        var correspondingForm = "Testing Lol";
         //add class
         
         //add content(user input from form)
         appendAppt.text(correspondingForm)
         //choose location w/ variable (it changes by button)
-
+        $("#9AM").append(appendAppt)
         //append
+        console.log("button click")
       
       });
 
