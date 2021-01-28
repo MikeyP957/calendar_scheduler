@@ -18,7 +18,7 @@ $(document).ready(function() {
        $(".btn").on("click", function(){
         console.log(this.id, "this id")
 
-        var appendAppt = $("<div>");
+        var appendAppt = $("<div class= 'appt'>");
         //I retrieve the ID from which button was clicked
         var correspondingElm = this.id;
         //concatinate the button ID to match the cooresponding form ID
@@ -52,7 +52,7 @@ $(document).ready(function() {
       console.log(appTime, "local storage times")
       
         for(i = 0; i < appTXT.length; i++){
-          var newDiv = $("<div>")
+          var newDiv = $("<div class='appt' >")
           newDiv.text(appTXT[i])
           $("." + appTime[i]).append(newDiv)
         }
