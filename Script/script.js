@@ -39,64 +39,30 @@ $(document).ready(function() {
         localStorage.setItem("appointmentTime",JSON.stringify(workingHourLS))
       });
 
-      //onclick function push an object onto the appointmesntsLs
-        //2 arrays 
-          //location: copied from onlick function
-          //text: coped from onlick function 
-    
-        //forloop to grab each array (each index coresponds) 
-        //use array workingHoursLS to set location
-        // use local storage "appointments" for text
-        //use local storage "appointmentTime" for location
 
-        function init(){
-          var storageTxt = localStorage.getItem("appointments");
-          var storageTime = localStorage.getItem("appointmentTime");
-           var appTXT = JSON.parse(storageTxt)
-           var appTime = JSON.parse(storageTime)
+    function init(){
+      if (localStorage.getItem("appointments") !== null){
+        
+      var storageTxt = localStorage.getItem("appointments");
+      var storageTime = localStorage.getItem("appointmentTime");
+        var appTXT = JSON.parse(storageTxt)
+        var appTime = JSON.parse(storageTime)
 
-          console.log(appTXT, "local storage text")
-          console.log(appTime, "local storage times")
-          if (appTXT.length !== null){
-            for(i = 0; i < appTXT.length; i++){
-              var newDiv = $("<div>")
-              newDiv.text(appTXT[i])
-              $("." + appTime[i]).append(newDiv)
-            }
-          }
-          
-        }
-        init();
-
-
-
-
-
-        //forloop start at 9 go to 17(5pm)
-        //$().addClass([i] + "-appointment")
-        //output--> 9-appointment, 10 ,11, 12..
-
-
-
-
-
-      // for(var i = 0; i <appointmentsLS.length; i++){
-
-      //   var storedAppts = localStorage.getItem("appointments")
-      //   console.log(storedAppts, "for loop")
-
-      //   if (storedAppts !== null) {
-      //     appointmentsLS[i] = storedAppts;
-      //   }
-      // }
+      console.log(appTXT, "local storage text")
+      console.log(appTime, "local storage times")
       
-   
-     
-    
-  //Call funtions
+        for(i = 0; i < appTXT.length; i++){
+          var newDiv = $("<div>")
+          newDiv.text(appTXT[i])
+          $("." + appTime[i]).append(newDiv)
+        }
+      }
+      else return;
+    }
 
-    
-  //Event Handlers
+  //call functions
+    init();
+
 
 
   })

@@ -52,19 +52,7 @@ THEN each time block is color-coded to indicate whether it is in the past, prese
     change color accordingly
         maybe use ternary operator.....(I think thats what its called LOL)
 
-WHEN I click into a time block
-THEN I can enter an event
 
-    get the buttons by class, onclick get the id or data or value... 
-    that will open a form asking for input, style and durration
-    submit button that 
-
-
-
-WHEN I refresh the page
-THEN the saved events persist
-
-    call the local storage when the page is loaded
 ```
 
 
