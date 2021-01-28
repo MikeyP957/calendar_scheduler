@@ -1,6 +1,7 @@
 $(document).ready(function() {
   //Global Variables
-  
+    var dailyHour = moment().hour();
+    console.log(dailyHour)
     //array to store local storage
    var appointmentsLS = [];
    var workingHourLS = [];
@@ -43,8 +44,16 @@ $(document).ready(function() {
         localStorage.setItem("appointments", JSON.stringify(appointmentsLS))
         localStorage.setItem("appointmentTime",JSON.stringify(workingHourLS))
       });
+      //this function changes the color of the container
+      //depending on the hour
+      function colorChange(){
+        var hourBlock = $("#hourBlock");
+        var hourBlockID = hourBlock.id;
 
+        console.log(hourBlock, hourBlockID, "color change running")
+      }
 
+  //This function initiates local storage
     function init(){
       if (localStorage.getItem("appointments") !== null){
         
@@ -67,6 +76,7 @@ $(document).ready(function() {
 
   //call functions
     init();
+    colorChange();
 
 
 
