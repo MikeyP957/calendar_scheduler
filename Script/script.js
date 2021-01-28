@@ -2,7 +2,9 @@ $(document).ready(function() {
   //Global Variables
   
     //array to store local storage
-   appointmentsLS = [],
+   var appointmentsLS = [];
+   var workingHourLS = [];
+
     $("#currentDay").text(moment().format("dddd,MMMM Do"));
     //find formula for regular hours put in forloop to add to page
   //Functions
@@ -29,20 +31,20 @@ $(document).ready(function() {
         console.log(correspondingForm, "-text from form")
         //add the text from the form to appointmentsLS array
         appointmentsLS.push(correspondingForm)
+        workingHourLS.push(correspondingElm)
         localStorage.setItem("appointments", JSON.stringify(appointmentsLS))
-        localStorage.getItem("appointments")
+        localStorage.setItem("appointmentTime",JSON.stringify(workingHourLS))
       });
 
       //onclick function push an object onto the appointmesntsLs
-        //object{ 
+        //2 arrays 
           //location: copied from onlick function
           //text: coped from onlick function 
-        // }
-        //[{},{},{}]
-        //forloop to grab each object 
-        //get index i, then append to object.location, append text from object.text
-
-        // forloop 
+    
+        //forloop to grab each array (each index coresponds) 
+        //use array workingHoursLS to set location
+        // use local storage "appointments" for text
+        //use local storage "appointmentTime" for location
 
         //forloop start at 9 go to 18
         //$().addClass([i] + "-appointment")
@@ -52,15 +54,15 @@ $(document).ready(function() {
 
 
 
-      // for(var i = 0; i <appointmentsLS.length; i++){
+      for(var i = 0; i <appointmentsLS.length; i++){
 
-      //   var storedAppts = localStorage.getItem("appointments")
-      //   console.log(storedAppts, "for loop")
+        var storedAppts = localStorage.getItem("appointments")
+        console.log(storedAppts, "for loop")
 
-      //   if (storedAppts !== null) {
-      //     appointmentsLS[i] = storedAppts;
-      //   }
-      // }
+        if (storedAppts !== null) {
+          appointmentsLS[i] = storedAppts;
+        }
+      }
       
    
      
