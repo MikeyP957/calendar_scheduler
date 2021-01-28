@@ -38,11 +38,6 @@ SO THAT I can manage my time effectively
 GIVEN I am using a daily planner to create a schedule
     use for loop to populate the schedule from 9-5
 
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-    when clicked display: "block"
-        current day (top of screen)
-        calander displayed
 
 WHEN I scroll down
 THEN I am presented with time blocks for standard business hours

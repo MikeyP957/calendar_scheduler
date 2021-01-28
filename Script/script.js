@@ -9,9 +9,10 @@ $(document).ready(function() {
     //find formula for regular hours put in forloop to add to page
   //Functions
       
-     $("#open").on("click", function(){
-       $("#timeBlocksContainer").css("display", "block")
-     });
+     $("#open").on("click",function(){
+      $("#timeBlocksContainer").css("display", "block")
+        }
+     );
        // When a .btn is clicked this function takes in the ID from that button
        //That ID matches the syntax for my form and final location to append
        $(".btn").on("click", function(){
@@ -48,6 +49,22 @@ $(document).ready(function() {
         // use local storage "appointments" for text
         //use local storage "appointmentTime" for location
 
+        function init(){
+          var storageTxt = localStorage.getItem("appointments");
+          var storageTime = localStorage.getItem("appointmentTime");
+           var appTXT = JSON.parse(storageTxt)
+           var appTime = JSON.parse(storageTime)
+
+          console.log(appTXT, "local storage text")
+          console.log(appTime, "local storage times")
+          if (appTXT.length !== null){
+            for(i = 0; i < appTXT.length; i++){
+              $("." + appTime[i]).append(appTXT[i])
+            }
+          }
+          
+        }
+        init();
 
 
 
@@ -61,15 +78,15 @@ $(document).ready(function() {
 
 
 
-      for(var i = 0; i <appointmentsLS.length; i++){
+      // for(var i = 0; i <appointmentsLS.length; i++){
 
-        var storedAppts = localStorage.getItem("appointments")
-        console.log(storedAppts, "for loop")
+      //   var storedAppts = localStorage.getItem("appointments")
+      //   console.log(storedAppts, "for loop")
 
-        if (storedAppts !== null) {
-          appointmentsLS[i] = storedAppts;
-        }
-      }
+      //   if (storedAppts !== null) {
+      //     appointmentsLS[i] = storedAppts;
+      //   }
+      // }
       
    
      
