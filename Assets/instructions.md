@@ -26,8 +26,10 @@ I WANT to add important events to a daily planner
     get elements, 
     use a form,   
     check to make sure they are available (no other even scheduled for same day/time, give alert otherwise),
+
     make sure the user puts in valid information (give alert otherwise),
     and append (alert that it was successful)
+
 SO THAT I can manage my time effectively
 ```
 
@@ -35,25 +37,7 @@ SO THAT I can manage my time effectively
 ## Acceptance Criteria
 
 ```
-GIVEN I am using a daily planner to create a schedule
-    use for loop to populate the schedule from 9-5
 
-
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours
-
-    append list with a button to schedule
-    form with time blocks
-
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-
-    conditional that compares if event is less than equal or more than the date
-    change color accordingly
-        maybe use ternary operator.....(I think thats what its called LOL)
-
-
-```
 
 
 ## Mock-Up

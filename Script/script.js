@@ -27,24 +27,37 @@ $(document).ready(function() {
           var correspondingElm = this.id;
         //concatinate the button ID to match the cooresponding form ID
           var correspondingForm = $("#write-" + correspondingElm).val().trim();
-        //create button that will clear task from list
-          var clearBtn = $("<button>")        
+              
         //add text from the form to the div that appends
-          appendAppt.text(correspondingForm)
-        //add class to button
-          clearBtn.addClass("deleteTask")
-          clearBtn.text("clear")
+          if(correspondingForm.length !== 0){
+            appendAppt.text(correspondingForm)
+          }  
+          else alert("You need to write an appointment!")
+          
+          if (workingHourLS.includes(correspondingElm)){
+            return alert("Something is already scheduled")
+          }
+          else{
+            appointmentsLS.push(correspondingForm)
+            workingHourLS.push(correspondingElm)
+          }   
         //concatinate the Id name to make it a class, 
         //where the div will append, i.e. ".9AM-appointment, .10AM-appointment"        
           $("." + correspondingElm).append(appendAppt)
         //add the text from the form to appointmentsLS array
-          appointmentsLS.push(correspondingForm)
-          workingHourLS.push(correspondingElm)
+        //add if else so each time slot only has one appt.
+
+
         //set item in local storage and add the array as a string  
           localStorage.setItem("appointments", JSON.stringify(appointmentsLS))
           localStorage.setItem("appointmentTime",JSON.stringify(workingHourLS))
       });
 
+      $("button").on("click", function(){
+        console.log("button was clicked")
+      })
+
+ 
     //this function changes the color of the container
     //depending on the hour
       $(document).ready(function(){
@@ -86,4 +99,8 @@ $(document).ready(function() {
         else return;
       });  
 
+      $("#clearSchedule").on("click",function(){
+        localStorage.clear();
+        window.location.reload()
+      } )
 })
