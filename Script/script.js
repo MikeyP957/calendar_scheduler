@@ -45,50 +45,45 @@ $(document).ready(function() {
           localStorage.setItem("appointmentTime",JSON.stringify(workingHourLS))
       });
 
-      //this function changes the color of the container
-      //depending on the hour
-        $(document).ready(function(){
-            // var hourBlock = [$(".9AM-appointments"),$(".10AM-appointments"),$(".11AM-appointments"),$(".noon-appointments"),$(".1PM-appointments"),$(".2PM-appointments"),$(".3PM-appointments"),$(".4PM-appointments"),$(".5PM-appointments")]
-          // for(i = 0; i < hourBlock.length; i++){
-          //   if (i < dailyHour - 9 ){
-          //     hourBlock[i].addClass(".past")
-          //   }
-          //   else if (i == dailyHour - 9){
-          //     hourBlock[i].addClass(".present")
-          //   }
-          //  else {
-          //     hourBlock[i].addClass(".future")
-          //   }
-          $(".9AM-appointments")
-          $(".11AM-appointments")
-          $(".1PM-appointments")
-        });
-      
-       
-
-  //This function initiates local storage
-  $(document).ready(function(){
-      //If the local storage is not empty
-      if (localStorage.getItem("appointments") !== null){
-        //get the local storage (string) 
-          var storageTxt = localStorage.getItem("appointments");
-          var storageTime = localStorage.getItem("appointmentTime");
-        //change the strings back to arrays 
-         var appTXT = JSON.parse(storageTxt)
-         var appTime = JSON.parse(storageTime)
-
-        console.log(appTXT, "local storage text")
-        console.log(appTime, "local storage times")
-        //append each text to the corresponding location
-          for(i = 0; i < appTXT.length; i++){
-            var newDiv = $("<div class='appt' >")
-            newDiv.text(appTXT[i])
-            $("." + appTime[i]).append(newDiv)
+    //this function changes the color of the container
+    //depending on the hour
+      $(document).ready(function(){
+        var idArray = [$("#9"), $("#10"), $("#11"), $("#12"), $("#13"), $("#14"), $("#15"), $("#16"), $("#17")];
+        for (i = 0; i < idArray.length; i++){
+          if(i < dailyHour - 9){
+            idArray[i].addClass("past")
           }
-      }
-      //otherwise return;
-      else return;
-    }
-  ); 
+          else if (i == dailyHour - 9){
+            idArray[i].addClass("present")
+          }
+          else idArray[i].addClass("future")
+        }
+      });
+      
+
+        
+  //This function initiates local storage
+    $(document).ready(function(){
+        //If the local storage is not empty
+        if (localStorage.getItem("appointments") !== null){
+          //get the local storage (string) 
+            var storageTxt = localStorage.getItem("appointments");
+            var storageTime = localStorage.getItem("appointmentTime");
+          //change the strings back to arrays 
+           var appTXT = JSON.parse(storageTxt)
+           var appTime = JSON.parse(storageTime)
+
+          console.log(appTXT, "local storage text")
+          console.log(appTime, "local storage times")
+          //append each text to the corresponding location
+            for(i = 0; i < appTXT.length; i++){
+              var newDiv = $("<div class='appt' >")
+              newDiv.text(appTXT[i])
+              $("." + appTime[i]).append(newDiv)
+            }
+        }
+        //otherwise return;
+        else return;
+      });  
 
 })
