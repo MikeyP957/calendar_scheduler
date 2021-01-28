@@ -47,10 +47,21 @@ $(document).ready(function() {
       //this function changes the color of the container
       //depending on the hour
       function colorChange(){
-        var hourBlock = $("#hourBlock");
-        var hourBlockID = hourBlock.id;
+        var hourBlock = [$("#9"),$("#10"),$("#11"),$("#12"),$("#13"),$("#14"),$("#15"),$("#16"),$("#17")]
+        for(i = 0; i < hourBlock.length; i++){
+          if (dailyHour - 9 < i){
+            hourBlock[i].addClass(".past")
+          }
+          else if (dailyHour - 9 == i){
+            hourBlock[i].addClass(".present")
+          }
+         else {
+            hourBlock[i].addClass(".future")
+          }
+        }
 
-        console.log(hourBlock, hourBlockID, "color change running")
+
+        console.log(hourBlock, "color change running")
       }
 
   //This function initiates local storage
