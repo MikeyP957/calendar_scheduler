@@ -29,12 +29,7 @@ body {
     text-align: center;
     border-radius: 15px;
   }
-  
-  .row {
-    white-space: pre-wrap;
-    height: 80px;
-    border-top: 1px solid white;;
-  }
+    
   
   .hour {
     background-color: #ffffff;
@@ -69,4 +64,9 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
-  
+ 
+  .hourBlock {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid
+  }
