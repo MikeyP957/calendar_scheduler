@@ -59,7 +59,9 @@ $(document).ready(function() {
           console.log(appTime, "local storage times")
           if (appTXT.length !== null){
             for(i = 0; i < appTXT.length; i++){
-              $("." + appTime[i]).append(appTXT[i])
+              var newDiv = $("<div>")
+              newDiv.text(appTXT[i])
+              $("." + appTime[i]).append(newDiv)
             }
           }
           
