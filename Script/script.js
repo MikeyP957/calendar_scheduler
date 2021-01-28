@@ -23,15 +23,20 @@ $(document).ready(function() {
         var correspondingElm = this.id;
         //concatinate the button ID to match the cooresponding form ID
         var correspondingForm = $("#write-" + correspondingElm).val().trim();
-                
+        //create button that will clear task from list
+        var clearBtn = $("<button>")        
         //add text from the form to the div that appends
         appendAppt.text(correspondingForm)
+        //add class to button
+        clearBtn.addClass("deleteTask")
+        clearBtn.text("clear")
         //concatinate the Id name to make it a class, 
         //where the div will append, i.e. ".9AM-appointment, .10AM-appointment"
+        
         $("." + correspondingElm).append(appendAppt)
-        //append
-        console.log("button click")
-        console.log(correspondingForm, "-text from form")
+    
+      
+
         //add the text from the form to appointmentsLS array
         appointmentsLS.push(correspondingForm)
         workingHourLS.push(correspondingElm)
