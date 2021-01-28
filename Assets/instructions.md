@@ -64,11 +64,6 @@ THEN I can enter an event
     that will open a form asking for input, style and durration
     submit button that 
 
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-
-    store these as divs?
-    append the container with a delete button
 
 
 WHEN I refresh the page

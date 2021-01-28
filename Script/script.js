@@ -9,7 +9,9 @@ $(document).ready(function() {
     //find formula for regular hours put in forloop to add to page
   //Functions
       
-     
+     $("#open").on("click", function(){
+       $("#timeBlocksContainer").css("display", "block")
+     });
        // When a .btn is clicked this function takes in the ID from that button
        //That ID matches the syntax for my form and final location to append
        $(".btn").on("click", function(){
@@ -46,7 +48,12 @@ $(document).ready(function() {
         // use local storage "appointments" for text
         //use local storage "appointmentTime" for location
 
-        //forloop start at 9 go to 18
+
+
+
+
+
+        //forloop start at 9 go to 17(5pm)
         //$().addClass([i] + "-appointment")
         //output--> 9-appointment, 10 ,11, 12..
 
