@@ -5,7 +5,7 @@ This is an interactive scheduler that can update user input, adapt in real time 
 The purpose of this application is to help users manage their time effectively by storing appointments in an easy and organized manner.
 
 The inital display shows the current date buttons to open the planner and clear the contents of the planner.
-
+![FrontPage](/Assets/intialButtons.png)
 When the user scrolls down the page time blocks can be seen and are given different colors. Each color represents the past, present and future time block in relation to the current time.
 
 To schedule an appointment for a time block the user must type into the appropriate form and click the corresponding button. This will add the text to the hour block container. 
